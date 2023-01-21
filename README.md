@@ -31,7 +31,7 @@ Value = the sum of all (M * S) / (E * T) for every product used in the composite
 Value = the sum of all (M * S) / (E * T) for every person participating in the performance of the service
 
 
-#Theory
+# Theory
 
 Given that there are nodes (people who want to buy or sell) and transactions between two nodes are describable as edges, what we have is a standard flow network. 
 
@@ -48,17 +48,27 @@ The quantities are where they are in the ratio (M*S)/(E*T) because in any econom
 If people make transactions such that they are always seeking to maximize their quantity of tokens, just as they would seek to do with any currency to maximize their net worth, free market dynamics will occur in such a way as to optimize the continued growth of available tokens and the overall value (i.e. a nation’s GDP) of the flows across the whole network. This can be done by installing more renewable energy, which increases the denominator and thus effectively lowers the asking price for the entity generating electricity (e-gen). People who need that energy will then want to buy it because of its low cost. 
 
 ## Example
-Say that a company like Amazon wants to use that energy to move a 10 kg package across 200 km to a customer. They should charge that customer 10*200 = 2000 units (M*S), divided by whatever the energy was that was required to ship the package. This energy quantity is minimally what was purchased from the e-gen. Only time has not been addressed - for time, if the customer wants their item in 1 day instead of 3 days, the time variable in the denominator would be 1 instead of a 3. Which results in a 3x increase in the cost that the customer will be asked to pay. Optimization will then occur in the direction of maximizing future value. Such optimization takes place as we build new technologies that can yield faster deliveries of heavier items with the lowest amount of energy used.
+Say that a company like Amazon wants to use that energy to move a 10 kg package across 200 km to a customer. They should charge that customer 10 x 200 = 2000 units (M x S), divided by whatever the energy was that was required to ship the package. This energy quantity is minimally what was purchased from the e-gen. Only time has not been addressed - for time, if the customer wants their item in 1 day instead of 3 days, the time variable in the denominator would be 1 instead of a 3. Which results in a 3x increase in the cost that the customer will be asked to pay. Optimization will then occur in the direction of maximizing future value. Such optimization takes place as we build new technologies that can yield faster deliveries of heavier items with the lowest amount of energy used.
 
-#Previous Work
-My credit goes to Dr. Adrian Bejan for inspiring my thoughts about network structures and dynamics through his papers on constructal law. Constructal law describes how networks evolve in such a way as to improve the current of whatever flows through them. In this manner, every network self-optimizes over time to carry more flow. 
+## Previous Work
+Credit goes to Dr. Adrian Bejan for inspiring my thoughts about network structures and dynamics through his papers on constructal law. Constructal law describes how networks evolve in such a way as to improve the current of whatever flows through them. In this manner, every network self-optimizes over time to carry more flow. 
 
 My addition to his work and that of many others with knowledge of graph theory and complex systems is to define this EMiTS metric. Through this metric, our own economic flows of massive objects across global distances requiring faster, more energy-efficient deliveries than ever before can be made to self-optimize simply through the creation of a token representing one unit of flow. Free market dynamics can then be used to self-optimize the economic network toward the creation of more value. Everyone always seeks to maximize their number of tokens regardless of what currency they use today. Using EMiTS, adding more energy or improving efficiency will quickly allow the accumulation of more tokens. Innovation of new technologies, processes, and policies governing collective behavior will more slowly allow for the accumulation of more tokens.
 
+## Observations
+
 Many economic systems and social structures have evolved over time, but humanity has yet to recognize the need for such constructions to be in alignment with physical laws. Any metric we use to coordinate our economic activities must be based on the laws of physics. 
 
-To use currencies that might get backed by some “precious” metal, which is only precious because those in power who made existing laws for their societies said so, does not guarantee that economic activities will take place that are consistent with physical laws. As a result, network dynamics take place that affect the well-being of all participants, including those in power because such non-optimized networks are always unsustainable.
+To use currencies that might get backed by some “precious” metal, which is only precious because those in power who made existing laws for their societies said so, does not guarantee that economic activities will take place that are consistent with physical laws. As a result, network dynamics take place that affect the well-being of all participants, including those in power because such non-optimized networks will always be unsustainable.
 
-By comparison, defining economic value from the ground up in accordance with physical laws allows for our economic activities to be in line with the energy and resource flows taking place within every other ecosystem on earth. Everything on land and in the ocean that makes use of sunlight that we use as the basis for the food and resources that power our modern economies, all of these naturally obey the laws of physics. Landscape ecology, biogeography, and population dynamics teaches how the spatial distributions and temporal dynamics of every interaction between individuals within populations within these ecosystems are all the result of these systems’ self-optimization toward one goal. This goal is to improve the current that flows within each system, described by constructal law. And every such flow can be described by EMiTS.
+In comparison, defining economic value from the ground up in accordance with physical laws allows for our economic activities to be in line with the energy and resource flows taking place within every other ecosystem on earth. Everything on land and in the ocean that makes use of sunlight that we use as the basis for the food and resources that power our modern economies, all of these naturally obey the laws of physics. Landscape ecology, biogeography, and population dynamics teaches how the spatial distributions and temporal dynamics of every interaction between individuals within populations within these ecosystems are all the result of these systems’ self-optimization toward one goal. This goal is to improve the current that flows within each system, described by constructal law. And every such flow can be described by EMiTS.
 
-Change the metric we optimize our economy by, and we change everything toward achieving true sustainability.
+# Next Steps
+
+Change the metric we optimize our economy by, at the most central locations where we all derive our price information, and we can change everything for the better.
+
+Climate change and all other social ills are not problems resulting from the lack of sufficient technologies or from human nature. Human nature is what it is only as the result of many generations of social optimization around many metrics other than physical law, resulting in much conflict, scarcity, and even death over the course of millennia. It has taken the advent of art, language, writing, and now science to understand the nature of physical laws. 
+
+Given what you have now read, will you choose to maintain business as usual, or might you choose to try experiments within your neighborhoods and communities, cities, states, and nations to adopt this new metric and to see what happens? Start from commodity pricing and redefine every other price and wage based from that. See where this goes and add to what you've read here.
+
+This is all free information. Open source. No license needed. Share it anywhere and share your successes back.
