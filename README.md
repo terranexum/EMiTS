@@ -1,6 +1,6 @@
 # EMiTS - Energy, Mass, Information, Time, and Space
-A composite metric of 5 quantities to value any economic product or service so that free market transactions take place in accordance with physical laws. 
-The climate problem is not a technology problem, or a human problem, it is a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
+A composite metric to value any economic product or service so that free market transactions take place sustainably in accordance with physical laws. 
+Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
 
 ## The Metric
 
