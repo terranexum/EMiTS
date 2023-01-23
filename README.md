@@ -2,9 +2,7 @@
 
 At present, we are aware of [systems biology](https://en.wikipedia.org/wiki/Systems_biology) as well as [systems engineering](https://www.engr.colostate.edu/se/). Systems physics does not seem to have been defined, though it underlies both these fields. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. 
 
-In every field of study, there are quantities that are measured according to physical units. Within systems physics, the quantity of concern is defined by EMiTS, and the physical units are a composite metric composed of Energy, Mass, Information, Time, and Space.
-
-EMiTS can be used to any economic product or service so that free market transactions can take place sustainably in accordance with physical laws. Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
+In every field of study, there are important quantities that must be measured. Within systems physics, the quantity of concern is defined by EMiTS which is a composite metric of five variables: Energy, Mass, Information, Time, and Space. EMiTS can be used as the measure of any economic product or service such that free market transactions can take place in accordance with physical laws. Each transaction is done in a way that results in greater sustainability. This work rests on the thought that perhaps the climate problem is not a technology problem or a human problem, but a problem resulting from the non-optimization of our economic activities around metrics inconsistent with the laws of physics.
 
 This is an open source project. Collaborators and derivative projects are welcomed.
 
