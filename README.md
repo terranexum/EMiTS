@@ -25,30 +25,44 @@ It may be that any complex networked system supporting a flow of something (whet
 ## The Metric
 
 ### For any product:
-Value = (M * S) / (E * T)
+$$ value = { {MS} \over {ET} } $$
 
 where
 
 M = the mass of the product being offered by the seller
+
 S = the distance the product must be moved from the seller to the buyer
+
 E = the energy required to transport that product from the seller to the buyer, while removing greenhouse gases resulting from its transportation 
+
 T = the time it takes for the product to be moved from the seller to the buyer
 
 ### For any service:
-Value = (M * S) / (E * T)
+$$ value = { {MS} \over {ET} } $$
 
 where
 
 M = the mass of the person providing the service
+
 S = the distance the person must travel to provide that service
+
 E = the energy required for the person to perform that service, which includes energy from food and energy for transportation
+
 T = the time it takes for the person to provide the service
 
 ### For composite products:
-Value = the sum of all (M * S) / (E * T) for every product used in the composite product
+$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
+
+where 
+
+p = a product within the composite product
 
 ### For a service requiring multiple people:
-Value = the sum of all (M * S) / (E * T) for every person participating in the performance of the service
+$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
+
+where 
+
+p = a person participating in the performance of the service
 
 ### For information:
 
