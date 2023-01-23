@@ -10,10 +10,10 @@ This is an open source project. Collaborators and derivative projects are welcom
 
 The global economy is perhaps the largest complex networked system we have created. Its activities are responsible for many global problems such as climate change. It is from thoughts such as this that EMiTS came to be developed: 
 
-* A student earns $300 a week after traveling back and forth to a job where he provides services to someone worth $3 million. 
+* A student earns $300 a week after traveling back and forth to a job where she provides services to someone worth $3 million. 
 * At the gas station, the student buys 10 gallons of gas for $30.
-* In the course of his travels, he emits a ton of CO2 emissions, which costs $300 to remove. This is the same as what he makes in a week.
-* He and many others want to lead more sustainable lives. Who should bear the costs of removing those CO2 emissions? Are the near-term costs worthwhile considering the longer-term benefits of achieving sustainabili?
+* In the course of her travels, she emits a ton of CO2 emissions, which costs $300 to remove. This is the same as what she makes in a week.
+* She and many others want to lead more sustainable lives. Who should bear the costs of removing those CO2 emissions? Are the near-term costs worthwhile considering the longer-term benefits of achieving sustainability?
 
 EMiTS was developed to address whether we can make business-as-usual purchasing decisions that automatically lead to climate progress without requiring incentives, education, or changes to policies. All from changing the value of whatever is being transacted, which requires a minimally brief agreement between just two people. 
 
