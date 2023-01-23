@@ -1,10 +1,10 @@
 # EMiTS - Energy, Mass, Information, Time, and Space
-A composite metric to value any economic product or service so that free market transactions take place sustainably in accordance with physical laws. 
+A composite metric to value any economic product or service so that free market transactions can take place sustainably in accordance with physical laws. 
 Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
 
-This is an open source project. Collaborators and derivative projects are most welcomed.
+This is an open source project. Collaborators and derivative projects are welcomed.
 
-## Application Example
+## An Example
 
 EMiTS is envisioned as a way to help restructure present economic systems to be in accordance with physical laws without additional expenditures or much mental effort. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. 
 
@@ -44,7 +44,7 @@ Value = the sum of all (M * S) / (E * T) for every person participating in the p
 
 ### For information:
 
-Information is not included in the general form of the EMiTS metric, though if it were to be included, it would reside in the denominator. That is because to optimize the exchange of information, the least data needs to be exchanged over the shortest amount of time possible to result in the desired outcome. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, or gestured. The exchange of information already requires the expression of all four EMiTS variables to account for the expenditure of energy, the reconfiguration of mass or energy to represent that information, requires storage over space, and requires some amount of time to take place. Thus when valuing information, the same expression can be used for the EMiTS metric as when it is used for valuing any physical product or service.
+Information is not included in the general form of the EMiTS metric, though if it were to be included, it would reside in the denominator. That is because to optimize the exchange of information, the least data needs to be exchanged over the shortest amount of time possible needed to achieve the desired outcome. This is easily understood: brevity is more efficient than verbosity, and one-page summaries are more efficient than thousand-page reports if the same outcome can be achieved. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, gestured, or otherwise communicated. The exchange of information already requires the expression of all four EMiTS variables to account for the expenditure of energy, the reconfiguration of mass or energy to represent that information, requires storage over space, and requires some amount of time to take place. Thus when valuing information, the same expression can be used for the EMiTS metric as when it is used for valuing any physical product or service.
 
 # Theory
 
