@@ -40,6 +40,9 @@ Value = the sum of all (M * S) / (E * T) for every product used in the composite
 ### For a service requiring multiple people:
 Value = the sum of all (M * S) / (E * T) for every person participating in the performance of the service
 
+### For information:
+
+Information is not included in the general form of the EMiTS metric, though if it were to be included, it would reside in the denominator. That is because to optimize the exchange of information, the least data needs to be exchanged over the shortest amount of time possible to result in the desired outcome. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, or gestured. The exchange of information already requires the expression of all four EMiTS variables to account for the expenditure of energy, the reconfiguration of mass or energy to represent that information, requires storage over space, and requires some amount of time to take place. Thus when valuing information, the same expression can be used for the EMiTS metric as when it is used for valuing any physical product or service.
 
 # Theory
 
@@ -51,7 +54,7 @@ This led me to think of a composite metric to describe this flow which requires 
 
 Just as the whole economy is currently structured so that each person seeks to maximize their net work, the goal here is also to maximize the value of EMiTS across the entire network, which can be done at the level of every individual, neighborhood, city, state, or nation, regardless of what spatial scale is being examined. 
 
-Information becomes important depending on the scale of reference. The finer the scale, the greater the node density in any given area, and the greater the amount of information that needs to be handled over the network to support economic activity. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, or gestured. Every act of exchanging information can be represented by a node on a temporal network, with edges intersecting that node which represent the entities exchanging the information. The value of that information can be defined as the sum of each entity's (M*S)/(E*T) required for their participation in the information exchange. 
+The finer the scale, the greater the node density in any given area, and the greater the amount of information that needs to be handled over the network to support economic activity. Every act of exchanging information can be represented by a node on a temporal network, with edges intersecting that node which represent the entities exchanging the information. The value of that information can be defined as the sum of each entity's (M*S)/(E*T) required for their participation in the information exchange. 
 
 The quantities are where they are in the ratio (M*S)/(E*T) because in any economic transaction involving a product, we always seek to move the greatest amount of mass we can over the longest distance possible for the least amount of energy over the shortest amount of time. Since space in this most basic sense is just the distance a mass needs to be moved across, S/T is effectively a velocity V and the product of that times mass M produces a momentum. Energy is in the denominator so EMiTS is really a ratio of two conserved values, momentum and energy. Since momentum and energy are always conserved, creating a token or unit of value based on these quantities ensures the stability of the value of such a token, because it is backed by nothing short of physical law itself.
 
