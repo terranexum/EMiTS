@@ -1,7 +1,6 @@
-# EMiTS
-## A Primer of Systems Physics for the Engineering of Complex Networked Systems
+# EMiTS - An Application of Systems Physics
 
-At present, we are aware of systems biology as well as systems engineering. However, systems physics does not seem to have been defined, although it underpins the study of both. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. 
+At present, we are aware of [systems biology](https://en.wikipedia.org/wiki/Systems_biology) as well as [systems engineering](https://www.engr.colostate.edu/se/). Systems physics does not seem to have been defined, though it underlies both these fields. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. 
 
 In every field of study, there are quantities that are measured according to physical units. Within systems physics, the quantity of concern is defined by EMiTS, and the physical units are a composite metric composed of Energy, Mass, Information, Time, and Space.
 
@@ -9,9 +8,9 @@ EMiTS can be used to any economic product or service so that free market transac
 
 This is an open source project. Collaborators and derivative projects are welcomed.
 
-## Applications of EMiTS
+## Applications of EMiTS in the Engineering of Complex Networked Systems
 
-We wish to address whether we can make business-as-usual purchasing decisions that automatically lead to climate progress without requiring incentives, education, or changes to policies. All from changing the value of whatever is being transacted, which requires a minimally brief agreement between just two people. 
+The global economy is perhaps the largest complex networked system we have created. Its activities are responsible for many global problems such as climate change. EMiTS was developed to address whether we can make business-as-usual purchasing decisions that automatically lead to climate progress without requiring incentives, education, or changes to policies. All from changing the value of whatever is being transacted, which requires a minimally brief agreement between just two people. 
 
 [Beginning from first principles](https://github.com/terranexum/EMiTS/tree/main/Concept_Development), it becomes clear how any product or service being transacted requires flows of energy and matter across networks that are distributed across space and time. All flow networks seek to maximize the flows they contain. EMiTS can be used to quantify those flows. We cannot efficiently change what we cannot measure, and with EMiTS, it appears to be possible for us to implement necessary changes with great efficiency. reorient our economic activities around the natural tendency for all flow systems to self-optimize, just by introducing a more useful metric for assigning value to everyday products and services.
 
