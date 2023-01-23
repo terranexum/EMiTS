@@ -24,4 +24,4 @@ The best clarity we can have of this spatiotemporal network appears to be within
 
 No light is involved in making this mental image, and thus there isn't anything like a lens I can use to focus this to make it more clear. But it seems like I have more chances everyday to attempt to resolve this even better. Definitely just a kind of sketch since I can't draw.
 
-![](![image](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/ST_Network_blur.png)
+![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/ST_Network_blur.png)
