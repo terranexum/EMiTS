@@ -2,6 +2,8 @@
 A composite metric to value any economic product or service so that free market transactions take place sustainably in accordance with physical laws. 
 Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
 
+This is an open source project. Collaborators and derivative projects are most welcomed.
+
 ## Application Example
 
 EMiTS is envisioned as a way to help restructure present economic systems to be in accordance with physical laws without additional expenditures or much mental effort. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. 
