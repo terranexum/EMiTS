@@ -1,10 +1,8 @@
 # Steps in the Development of EMiTS
 
-## Details of the Thought Process
+## The Thought Process
 
-1) Perhaps a first step is to gain some initial familiarity with different fields of knowledge where quantities are defined and measured. 
-
-By doing so, it is possible to see how there always appear to be variations on the same themes in every field, each described by different words in different places by different people. For example, an eco-industrial park, eco-industrial cluster, and technology cluster are all variations on the same concept of co-locating people and technological capabilities to improve the efficiency of one or more activities.
+1) Perhaps a first step is to gain some initial familiarity with different fields of knowledge where quantities are defined and measured. By doing so, it is possible to see how there always appear to be variations on the same themes in every field, each described by different words in different places by different people. For example, an eco-industrial park, eco-industrial cluster, and technology cluster are all variations on the same concept of co-locating people and technological capabilities to improve the efficiency of one or more activities.
 
 2) It then becomes possible to understand that each of these variations have inputs and outputs, and were created for some purpose. Basically, each of these is a function. With input parameters that are processed to create some output. Energy is always an input to all of these. Examining the other possible inputs and factoring those inputs to their most basic inputs yields the quantities within EMiTS - energy, mass, information, time, and space. 
 
@@ -17,7 +15,9 @@ By doing so, it is possible to see how there always appear to be variations on t
 Once a network of functions is established, it becomes possible to comprehend the following:
 
 1) that the world is a massively complex dynamical system of networked systems, performing untold numbers of computations every second through flows of energy, matter, and information,
+
 2) that living things are themselves networks joined by interfaces and interactions to the physical network, and
+
 3) that the things that living things build are also themselves networks, joined by interfaces and interactions to other living things that interact with these. 
 
 ## Spatial Networks and Networks within Networks 
