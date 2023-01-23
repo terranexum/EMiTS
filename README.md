@@ -2,6 +2,12 @@
 A composite metric to value any economic product or service so that free market transactions take place sustainably in accordance with physical laws. 
 Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
 
+## Application
+
+To aid in restructuring present economic systems to be in accordance with physical laws by allowing flows of energy and matter to be represented in the value of transacted items. In the diagram below, energy is a transacted item. The metric that follows can be applied to obtain the value of both the supply and the demand. Based on those numeric values, supply and demand can be adjusted as needed according to current free market dynamics. 
+
+![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
+
 ## The Metric
 
 ### For any product:
