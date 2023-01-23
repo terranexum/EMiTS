@@ -1,4 +1,4 @@
-# EMiTS - An Application of Systems Physics
+# EMiTS - Applying Systems Physics in the Service of Sustainability
 
 At present, we are aware of [systems biology](https://en.wikipedia.org/wiki/Systems_biology) as well as [systems engineering](https://www.engr.colostate.edu/se/). Systems physics does not seem to have been defined, though it underlies both these fields. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. 
 
