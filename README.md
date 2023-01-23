@@ -1,8 +1,19 @@
-# EMiTS - Energy, Mass, Information, Time, and Space
-A composite metric to value any economic product or service so that free market transactions can take place sustainably in accordance with physical laws. 
-Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
+# EMiTS
+## A Primer of Systems Physics for the Engineering of Complex Networked Systems
+
+At present, we are aware of systems biology as well as systems engineering. However, systems physics does not seem to have been defined, although it underpins the study of both. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. 
+
+In every field of study, there are quantities that are measured according to physical units. Within systems physics, the quantity of concern is defined by EMiTS, and the physical units are a composite metric composed of Energy, Mass, Information, Time, and Space.
+
+EMiTS can be used to any economic product or service so that free market transactions can take place sustainably in accordance with physical laws. Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
 
 This is an open source project. Collaborators and derivative projects are welcomed.
+
+## Applications of EMiTS
+
+We wish to address whether we can make business-as-usual purchasing decisions that automatically lead to climate progress without requiring incentives, education, or changes to policies. All from changing the value of whatever is being transacted, which requires a minimally brief agreement between just two people. 
+
+[Beginning from first principles](https://github.com/terranexum/EMiTS/tree/main/Concept_Development), it becomes clear how any product or service being transacted requires flows of energy and matter across networks that are distributed across space and time. All flow networks seek to maximize the flows they contain. EMiTS can be used to quantify those flows. We cannot efficiently change what we cannot measure, and with EMiTS, it appears to be possible for us to implement necessary changes with great efficiency. reorient our economic activities around the natural tendency for all flow systems to self-optimize, just by introducing a more useful metric for assigning value to everyday products and services.
 
 ## An Example
 
