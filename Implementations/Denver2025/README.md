@@ -2,7 +2,9 @@
 
 [Denver's official Climate Action Plan](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Climate-Action) is for 40% emissions reduction by 2025. You can read the plan in PDF form [here](https://www.denvergov.org/files/assets/public/climate-action/documents/ddphe_80x50_climateactionplan.pdf). Today, 80% of the emissions within Denver are from commercial buildings (about 40%) and from gas used for transportation (40%).
 
-Unlike the current plan, we are aiming for 100% renewable energy serving Denver in 2025, but we cannot rely on existing permitting and approval processes as well as policy changes to make this possible. The plan to be developed here will utilize free market dynamics and individual choices based on maximizing personal gains. In chemistry terms, this effectively lowers the activation energy of the reaction, turning it from one where energy must be provided into one that occurs spontaneously. In actual terms, if configured correctly, no incentives should need to be provided for this renewable energy rollout to happen. 
+Unlike the current plan, we are aiming for 100% renewable energy serving Denver in 2025, but we cannot rely on existing permitting and approval processes as well as policy changes to make this possible. To do this, we must rely on providers such as [Plurigrid](https://plurigrid.xyz) for distributed, peer-to-peer transactive energy. Energy production and storage capacity essentially develops from the ground up, expanding from places that already have solar panels, electric car batteries, and other energy storage forms.
+
+The plan to be further developed here will utilize free market dynamics and individual choices based on maximizing personal gains. In chemistry terms, this effectively lowers the activation energy of the reaction, turning it from one where energy must be provided into one that occurs spontaneously. In actual terms, if configured correctly, no incentives should need to be provided for this renewable energy rollout to happen. 
 
 | Step | Process Description | Notes |
 |---|---|---|
