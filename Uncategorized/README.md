@@ -1,6 +1,6 @@
 # Uncategorized Items
 
-Making a journal of thoughts on this topic for later organization.
+Making a journal of thoughts for later organization.
 
 ## In time sequence
 
