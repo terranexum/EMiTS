@@ -2,11 +2,15 @@
 A composite metric to value any economic product or service so that free market transactions take place sustainably in accordance with physical laws. 
 Perhaps the climate problem is not a technology problem, or a human problem, but a problem resulting from the non-optimization of economic activities around metrics inconsistent with the laws of physics.
 
-## Application
+## Application Example
 
-To aid in restructuring present economic systems to be in accordance with physical laws by allowing flows of energy and matter to be represented in the value of transacted items. In the diagram below, energy is a transacted item. The metric that follows can be applied to obtain the value of both the supply and the demand. Based on those numeric values, supply and demand can be adjusted as needed according to current free market dynamics. 
+EMiTS is envisioned as a way to help restructure present economic systems to be in accordance with physical laws without additional expenditures or much mental effort. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. 
+
+The diagram below is an example where energy is the transacted item. The metric defined in the following section contains measurable variables that can be assembled to obtain a value for that item. Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. We see that free market dynamics, as they currently are, can be used as the basis for deploying more renewable energy capacity and for using and storing that energy more efficiently.
 
 ![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
+
+It may be that any complex networked system supporting a flow of something (whether energy or mass, to include information as a special case) can have those flows expressed in terms of EMiTS. Doing so provides a means for the system to optimize itself through its own dynamics. 
 
 ## The Metric
 
