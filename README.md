@@ -4,9 +4,17 @@ EMiTS is envisioned as a way to help restructure current economic systems to be 
 
 This is an open source project. Collaborators and derivative projects are welcomed.
 
-## An Example
+## Code on Google Colab - EMiTS for Renewable Energy Expansion
 
-There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts as described in this section. The following code block is from that example.
+There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts.
+
+Cities are responsible for 70% of greenhouse gas emissions on average, but suburban areas offer more space for renewable energy installations such as rooftop solar. The city of Denver has a goal of reaching 40% emissions reductions by 2025. Instead of waiting for new transmission lines and long permitting and construction processes to occur, we also want to investigate whether portable energy storage transported into cities and back during daily commutes can make a difference in helping cities reach its sustainability goals even faster.
+
+These types of energy production, storage, and transportation dynamics are well suited to being modeled through the use of a spatiotemporal flow network such as the one roughly depicted below where the flow is measured by EMiTS. Time runs horizontally and space runs vertically (and out of the screen) to represent locations on Earth's surface. Values of EMiTS can be computed for any network location along the timeline up to the present time. When someone wants to buy or sell, the expectation is that they will still choose transactions that will maximize their net worth, as measured in terms of EMiTS. 
+
+![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/ST_Network_blur.png)
+
+A code block from the above example, demonstrating how energy, mass, information, time, and space are variables that go into the determination of an item's value in terms of EMiTS:
 
 ```
 # E-Gen (Seller) - a 4 kW solar array operating over 6 sun hours
@@ -28,7 +36,7 @@ home_value = home.getValue()
 home.setTType = TType.BUY
 ```
 
-The diagram below is also in the above example; energy is the transacted item in this case. The metric defined in the following section contains measurable variables that can be assembled to obtain a value for that item. Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. We see that free market dynamics, as they currently are, can be used as the basis for deploying more renewable energy capacity and for using and storing that energy more efficiently.
+Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. Nothing here is different from normal free market dynamics, just that now these dynamics can be used to drive the deployment of more renewable energy and storage capacity as well as more efficient means of using that energy.
 
 ### How to Read the Diagram
 
