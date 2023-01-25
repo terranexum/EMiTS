@@ -10,7 +10,7 @@ There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiT
 
 Cities are responsible for 70% of greenhouse gas emissions on average, but suburban areas offer more space for renewable energy installations such as rooftop solar. The city of Denver has a [goal of reaching 40% emissions reductions by 2025](https://github.com/terranexum/EMiTS/tree/main/Implementations/Denver2025). Instead of waiting for new transmission lines and long permitting and construction processes to occur, we are investigating whether portable energy storage transported into cities and back during daily commutes can make a difference in helping cities reach their sustainability goals even faster. Such types of energy production, storage, and transportation dynamics are easy to represent using a [spatiotemporal flow network](https://github.com/terranexum/EMiTS/tree/main/Concept_Development) where the flow is calculated in terms of EMiTS. An early attempt to depict such a network is below.
 
-Time runs horizontally and space runs vertically (and out of the screen) to represent locations on Earth's surface. Values of EMiTS can be computed for any network location along the timeline up to the present time. When someone wants to buy or sell, the expectation is that they will still choose transactions that will maximize their net worth, as measured in terms of EMiTS. 
+Time runs horizontally and space runs vertically (and out of the screen) to represent locations on Earth's surface. Values of EMiTS can be computed for any network location along the timeline up to the present time. When someone wants to buy or sell, the expectation is that they will still choose transactions that will maximize their net worth, as measured in terms of EMiTS. The actual transactions occur at the nodes shown in the diagram.
 
 ![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/ST_Network_blur.png)
 
@@ -35,7 +35,6 @@ home.setValue(E=30, M=1, I=1, T=24, S=1)
 home_value = home.getValue()
 home.setTType = TType.BUY
 ```
-
 Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. Nothing here is different from normal free market dynamics, just that now these dynamics can be used to drive the deployment of more renewable energy and storage capacity as well as more efficient means of using that energy.
 
 ### How to Read the Diagram
