@@ -1,8 +1,93 @@
 # EMiTS - A Framework and Metric for Accelerating the Energy Transition Needed to Reduce Emissions
 
-There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts.
+EMiTS is envisioned as a way to help restructure current economic systems to be in alignment with physical laws requiring the conservation of energy and momentum. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. This simple change in the valuation of items is expected to optimize such flows to support even greater flows, without the need for any significant behavioral changes. Results in the form of reduced emissions while serving current and future economic needs are anticipated to be possible without the need for more education, policy changes, or government regulations.
 
 This is an open source project. Collaborators and derivative projects are welcomed.
+
+## An Example
+
+There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts as described in this section. The following code block is from that example.
+
+```
+# E-Gen (Seller) - a 4 kW solar array operating over 6 sun hours
+solar_home = Element('Rooftop_Solar', EType.PRODUCT)
+solar_home.setValue(E=24, M=1, I=1, T=6, S=1)
+solar_home_value = solar_home.getValue()
+solar_home.setTType = TType.SELL
+
+# E-User (Buyer) - One Portable Whole-Home Battery Storing 100 kWh (EV-size)
+battery = Element('Portable_Battery', EType.PRODUCT)
+battery.setValue(E=100, M=455, I=1, T=12, S=1)
+battery_value = battery.getValue()
+battery.setTType = TType.BUY
+
+# E-User (Buyer) - One Home Requiring 30 kWh over a 24 hour day
+home = Element('My_Home', EType.PRODUCT)
+home.setValue(E=30, M=1, I=1, T=24, S=1)
+home_value = home.getValue()
+home.setTType = TType.BUY
+```
+
+The diagram below is also in the above example; energy is the transacted item in this case. The metric defined in the following section contains measurable variables that can be assembled to obtain a value for that item. Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. We see that free market dynamics, as they currently are, can be used as the basis for deploying more renewable energy capacity and for using and storing that energy more efficiently.
+
+### How to Read the Diagram
+
+* Daytime: There is only one seller so anyone wanting electricity will have to purchase it at that price. If there were more than one seller, the seller with the lowest price would be the preferred seller for the two buyers. Only the buyer with the storage battery can make a purchase of the full amount of electricity being offered by the seller. The buyer with the home can only make a partial purchase of electricity at the moment.
+* Nighttime: the buyer with the storage battery during the day has now become the seller and the seller with the rooftop solar array at home is now needing to be a buyer. Neither of the two buyers can afford to purchase all the electricity being sold. Thus, the seller must sell portions of that electricity to multiple buyers.
+
+![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
+
+It may be that any complex networked system supporting a flow of something (whether energy or mass, to include information as a special case) can have those flows expressed in terms of EMiTS. Doing so provides a means for the system to optimize itself through its own dynamics. 
+
+## The Metric
+
+### For any product:
+$$ value = { {MS} \over {ET} } $$
+
+where
+
+M = the mass of the product being offered by the seller, in kg
+
+S = the distance the product must be moved from the seller to the buyer, in km
+
+E = the energy required to transport that product from the seller to the buyer, while removing greenhouse gases resulting from its transportation, in kWh
+
+T = the time it takes for the product to be moved from the seller to the buyer, in hours
+
+### For any service:
+$$ value = { {MS} \over {ET} } $$
+
+where
+
+M = the mass of the person providing the service, in kg
+
+S = the distance the person must travel to provide that service, in km
+
+E = the energy required for the person to perform that service, which includes energy from food and energy for transportation, in kWh
+
+T = the time it takes for the person to provide the service, in hours
+
+### For composite products:
+$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
+
+where 
+
+p = a product within the composite product
+
+### For a service requiring multiple people:
+$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
+
+where 
+
+p = a person participating in the performance of the service
+
+### For information:
+
+Information is not included in the general form of the EMiTS metric, though if it were to be included, it would reside in the denominator. That is because to optimize the exchange of information, the least data needs to be exchanged over the shortest amount of time possible needed to achieve the desired outcome. This is easily understood: brevity is more efficient than verbosity, and one-page summaries are more efficient than thousand-page reports if the same outcome can be achieved. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, gestured, or otherwise communicated. The exchange of information already requires the expression of all four EMiTS variables to account for the expenditure of energy, the reconfiguration of mass or energy to represent that information, requires storage over space, and requires some amount of time to take place. Thus when valuing information, the same expression can be used for the EMiTS metric as when it is used for valuing any physical product or service.
+
+## Another Example
+
+Say that a company like Amazon wants to use that energy to move a 10 kg package across 200 km to a customer. They should charge that customer 10 x 200 = 2000 units (M x S), divided by whatever the energy was that was required to ship the package. This energy quantity is minimally what was purchased from the e-gen. Only time has not been addressed - for time, if the customer wants their item in 1 day instead of 3 days, the time variable in the denominator would be 1 instead of a 3. Which results in a 3x increase in the cost that the customer will be asked to pay. Optimization will then occur in the direction of maximizing future value. Such optimization takes place as we build new technologies that can yield faster deliveries of heavier items with the lowest amount of energy used.
 
 ## Background on Systems Physics
 
@@ -23,67 +108,6 @@ EMiTS was developed to address whether we can make business-as-usual purchasing 
 
 [Beginning from first principles](https://github.com/terranexum/EMiTS/tree/main/Concept_Development), it becomes clear how any product or service being transacted requires flows of energy and matter across networks that are distributed across space and time. All flow networks seek to maximize the flows they contain. EMiTS can be used to quantify those flows. We cannot efficiently change what we cannot measure, and with EMiTS, it appears to be possible for us to implement necessary changes with great efficiency. reorient our economic activities around the natural tendency for all flow systems to self-optimize, just by introducing a more useful metric for assigning value to everyday products and services.
 
-## An Example
-
-EMiTS is envisioned as a way to help restructure present economic systems to be in accordance with physical laws without additional expenditures or much mental effort. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. 
-
-The diagram below is an example where energy is the transacted item. The metric defined in the following section contains measurable variables that can be assembled to obtain a value for that item. Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. We see that free market dynamics, as they currently are, can be used as the basis for deploying more renewable energy capacity and for using and storing that energy more efficiently.
-
-### How to Read the Diagram
-
-* Daytime: There is only one seller so anyone wanting electricity will have to purchase it at that price. If there were more than one seller, the seller with the lowest price would be the preferred seller for the two buyers. Only the buyer with the storage battery can make a purchase of the full amount of electricity being offered by the seller. The buyer with the home can only make a partial purchase of electricity at the moment.
-* Nighttime: the buyer with the storage battery during the day has now become the seller and the seller with the rooftop solar array at home is now needing to be a buyer. Neither of the two buyers can afford to purchase all the electricity being sold. Thus, the seller must sell portions of that electricity to multiple buyers.
-
-![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
-
-It may be that any complex networked system supporting a flow of something (whether energy or mass, to include information as a special case) can have those flows expressed in terms of EMiTS. Doing so provides a means for the system to optimize itself through its own dynamics. 
-
-## The Metric
-
-### For any product:
-$$ value = { {MS} \over {ET} } $$
-
-where
-
-M = the mass of the product being offered by the seller
-
-S = the distance the product must be moved from the seller to the buyer
-
-E = the energy required to transport that product from the seller to the buyer, while removing greenhouse gases resulting from its transportation 
-
-T = the time it takes for the product to be moved from the seller to the buyer
-
-### For any service:
-$$ value = { {MS} \over {ET} } $$
-
-where
-
-M = the mass of the person providing the service
-
-S = the distance the person must travel to provide that service
-
-E = the energy required for the person to perform that service, which includes energy from food and energy for transportation
-
-T = the time it takes for the person to provide the service
-
-### For composite products:
-$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
-
-where 
-
-p = a product within the composite product
-
-### For a service requiring multiple people:
-$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
-
-where 
-
-p = a person participating in the performance of the service
-
-### For information:
-
-Information is not included in the general form of the EMiTS metric, though if it were to be included, it would reside in the denominator. That is because to optimize the exchange of information, the least data needs to be exchanged over the shortest amount of time possible needed to achieve the desired outcome. This is easily understood: brevity is more efficient than verbosity, and one-page summaries are more efficient than thousand-page reports if the same outcome can be achieved. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, gestured, or otherwise communicated. The exchange of information already requires the expression of all four EMiTS variables to account for the expenditure of energy, the reconfiguration of mass or energy to represent that information, requires storage over space, and requires some amount of time to take place. Thus when valuing information, the same expression can be used for the EMiTS metric as when it is used for valuing any physical product or service.
-
 # Theory
 
 Given that there are nodes (people who want to buy or sell) and transactions between two nodes are describable as edges, what we have is a standard flow network. 
@@ -99,9 +123,6 @@ The finer the scale, the greater the node density in any given area, and the gre
 The quantities are where they are in the ratio ${{MS} \over {ET}}$ because in any economic transaction involving a product, we always seek to move the greatest amount of mass we can over the longest distance possible for the least amount of energy over the shortest amount of time. Since space in this most basic sense is just the distance a mass needs to be moved across, ${S \over T}$ is effectively a velocity V and the product of that times mass M produces a momentum. Energy is in the denominator so EMiTS is really a ratio of two conserved values, momentum and energy. Since momentum and energy are always conserved, creating a token or unit of value based on these quantities ensures the stability of the value of such a token, because it is backed by nothing short of physical law itself.
 
 If people make transactions such that they are always seeking to maximize their quantity of tokens, just as they would seek to do with any currency to maximize their net worth, free market dynamics will occur in such a way as to optimize the continued growth of available tokens and the overall value (i.e. a nation’s GDP) of the flows across the whole network. This can be done by installing more renewable energy, which increases the denominator and thus effectively lowers the asking price for the entity generating electricity (e-gen). People who need that energy will then want to buy it because of its low cost. 
-
-## Example
-Say that a company like Amazon wants to use that energy to move a 10 kg package across 200 km to a customer. They should charge that customer 10 x 200 = 2000 units (M x S), divided by whatever the energy was that was required to ship the package. This energy quantity is minimally what was purchased from the e-gen. Only time has not been addressed - for time, if the customer wants their item in 1 day instead of 3 days, the time variable in the denominator would be 1 instead of a 3. Which results in a 3x increase in the cost that the customer will be asked to pay. Optimization will then occur in the direction of maximizing future value. Such optimization takes place as we build new technologies that can yield faster deliveries of heavier items with the lowest amount of energy used.
 
 ## Previous Work
 This work has been distilled from my exchanges with many people who deserve to be [acknowledged](https://github.com/terranexum/EMiTS/tree/main/Credits_and_References). Of these, Dr. Adrian Bejan deserves much credit for inspiring my thoughts about network structures and dynamics through his many papers on constructal law. Constructal law describes how networks evolve in such a way as to improve the current of whatever flows through them. In this manner, every network self-optimizes over time to carry more flow. 
