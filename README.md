@@ -1,10 +1,14 @@
-# EMiTS - Systems Physics for Sustainability
+# EMiTS - A Framework and Metric for Accelerating the Energy Transition Needed to Reduce Emissions
 
-At present, we are aware of [systems biology](https://en.wikipedia.org/wiki/Systems_biology) as well as [systems engineering](https://www.engr.colostate.edu/se/). Systems physics does not seem to have been defined, though it underlies both these fields. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. 
-
-In every field of study, there are important quantities that must be measured. Within systems physics, the quantity of concern is defined by EMiTS which is a composite metric of five variables: Energy, Mass, Information, Time, and Space. EMiTS can be used as the measure of any economic product or service such that free market transactions can take place in accordance with physical laws. Each transaction is done in a way that results in greater sustainability. This work rests on the thought that perhaps the climate problem is not a technology problem or a human problem, but a problem resulting from the non-optimization of our economic activities around metrics inconsistent with the laws of physics.
+There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts.
 
 This is an open source project. Collaborators and derivative projects are welcomed.
+
+## Background on Systems Physics
+
+At present, we are aware of [systems biology](https://en.wikipedia.org/wiki/Systems_biology) as well as [systems engineering](https://www.engr.colostate.edu/se/). Systems physics does not seem to have been defined, though it underlies both these fields. Just as biology requires an understanding of chemistry, which requires an understanding of physics since all higher activities must occur according to physical laws, our present understanding of systems biology and systems engineering may be greatly improved by an understanding of systems physics. In every field of study, there are important quantities that must be measured. In systems physics, we have a quantity defined by EMiTS, a composite metric of five variables: energy, mass, information, time, and space. 
+
+EMiTS can be used as the measure of any economic product or service such that free market transactions can take place in accordance with physical laws. Each transaction is done in a way that results in greater sustainability. This work rests on the thought that perhaps the climate problem is not a technology problem or a human problem, but a problem resulting from the non-optimization of our economic activities around metrics inconsistent with the laws of physics.
 
 ## Applications of EMiTS in the Engineering of Complex Networked Systems
 
@@ -24,6 +28,11 @@ EMiTS was developed to address whether we can make business-as-usual purchasing 
 EMiTS is envisioned as a way to help restructure present economic systems to be in accordance with physical laws without additional expenditures or much mental effort. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. 
 
 The diagram below is an example where energy is the transacted item. The metric defined in the following section contains measurable variables that can be assembled to obtain a value for that item. Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. We see that free market dynamics, as they currently are, can be used as the basis for deploying more renewable energy capacity and for using and storing that energy more efficiently.
+
+### How to Read the Diagram
+
+* Daytime: There is only one seller so anyone wanting electricity will have to purchase it at that price. If there were more than one seller, the seller with the lowest price would be the preferred seller for the two buyers. Only the buyer with the storage battery can make a purchase of the full amount of electricity being offered by the seller. The buyer with the home can only make a partial purchase of electricity at the moment.
+* Nighttime: the buyer with the storage battery during the day has now become the seller and the seller with the rooftop solar array at home is now needing to be a buyer. Neither of the two buyers can afford to purchase all the electricity being sold. Thus, the seller must sell portions of that electricity to multiple buyers.
 
 ![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
 
