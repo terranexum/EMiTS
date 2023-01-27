@@ -8,13 +8,9 @@ This is an open source project. Collaborators and derivative projects are welcom
 
 There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts.
 
-Cities are responsible for 70% of greenhouse gas emissions on average, but suburban areas offer more space for renewable energy installations such as rooftop solar. The city of Denver has a [goal of reaching 40% emissions reductions by 2025](https://github.com/terranexum/EMiTS/tree/main/Implementations/Denver2025). Instead of waiting for new transmission lines and long permitting and construction processes to occur, we are investigating whether portable energy storage transported into cities and back during daily commutes can make a difference in helping cities reach their sustainability goals even faster. Such types of energy production, storage, and transportation dynamics are easy to represent using a [spatiotemporal flow network](https://github.com/terranexum/EMiTS/tree/main/Concept_Development) where the flow is calculated in terms of EMiTS. An early attempt to depict such a network is below.
+Cities are responsible for 70% of greenhouse gas emissions on average, but suburban areas offer more space for renewable energy installations such as rooftop solar. The city of Denver has a [goal of reaching 40% emissions reductions by 2025](https://github.com/terranexum/EMiTS/tree/main/Implementations/Denver2025). Instead of waiting for new transmission lines and long permitting and construction processes to occur, we are investigating whether portable energy storage transported into cities and back during daily commutes can make a difference in helping cities reach their sustainability goals even faster. 
 
-Time runs horizontally and space runs vertically (and out of the screen) to represent locations on Earth's surface. Values of EMiTS can be computed for any network location along the timeline up to the present time. When someone wants to buy or sell, the expectation is that they will still choose transactions that will maximize their net worth, as measured in terms of EMiTS. The actual transactions occur at the nodes shown in the diagram.
-
-![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/ST_Network_blur.png)
-
-Below is a code block from the above example, demonstrating how energy, mass, information, time, and space are variables that go into the determination of an item's value in terms of EMiTS:
+Below is a code block from this example, demonstrating how energy, mass, information, time, and space are variables that go into the determination of an item's value in terms of EMiTS:
 
 ```
 # E-Gen (Seller) - a 4 kW solar array operating over 6 sun hours
