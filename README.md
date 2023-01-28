@@ -12,7 +12,9 @@ This is an open source project. Collaborators and derivative projects are welcom
 
 We use metric units consistent with typical human-scale activities requiring energy, matter, and information flows. When these are converted to to SI units, we are left with units of inverse velocity, s/m. We may be able to achieve a dimensionless EMiTS value by multiplying the current formula by a constant with units of speed, m/s. The speed of light `c` comes to mind, which is the maximum speed of any energy, mass, or information flow. It is unknown whether the speed of light needs to be used in this context, but its presence allows for values that have typical orders of magnitude compared to present day currencies. It also produces a dimensionless value for the EMiTS metric.
 
-If a value is not representable for an item or service, its value is set to 1 below. An example of this in a transaction: a heat pump weighing 100 kg must be transported a distance of 10 km to service a home that requires 10 kWh of heat over 24 hours. Mass and distance only appear in the initial state. Thus, to obtain a value for the metric using the other variables, we set these equal to 1. 
+If a value is not representable for an item or service, its value is set to 1 below. An example of this in a transaction: a heat pump weighing M = 100 kg must be transported a distance of S = 10 km to service a home that requires E = 10 kWh of heat over T = 24 hours. Mass M and distance S only appear in the initial state. Thus, to compute the following ratios, we must use a 1 in the place of non-defined variables.
+
+These expressions are not meant to define a final product. The intent is to develop these further into a metric that is more useful for achieving sustainability goals than current metrics by which we value items and services.
 
 ### For any product:
 $$ value = { c {MS} \over {ET} } $$
