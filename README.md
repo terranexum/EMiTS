@@ -1,48 +1,16 @@
 # EMiTS - A Framework and Metric for Accelerating the Energy Transition Needed to Reduce Emissions
 
-EMiTS is envisioned as a way to help restructure current economic systems to be in alignment with physical laws requiring the conservation of energy and momentum. This is done by allowing flows of energy and matter to be accounted for in the value of transacted items. This simple change in the valuation of items is expected to optimize such flows to support even greater flows, without the need for any significant behavioral changes. Results in the form of reduced emissions while serving current and future economic needs are anticipated to be possible without the need for more education, policy changes, or government regulations.
+EMiTS is envisioned as a way to help restructure any complex network so that any transaction involving energy, matter, or information can be represented in terms of a maximizable metric. Through such maximization, greater efficiencies can be achieved in the flow  of energy, matter, and information across time and space. These five quantities are represented within the EMiTS acronym.
+
+Energy and momentum are always physically conserved. Unsustainable activities and processes result when networks seek to maximize metrics that ignore physical quantities found in conservation laws. Greater sustainability can thus be achieved by making use of the same network dynamics that operate in any complex network, but with a change of the metric to one that incorporates physically conserved values. EMiTS is one such metric. There may be others.
+
+Results in the form of reduced emissions are thus expected to be possible if EMiTS is used to value products or services being transacted, without the need for any significant behavioral changes or the need for more education, policy changes, or government regulations.
 
 This is an open source project. Collaborators and derivative projects are welcomed.
 
-## Code on Google Colab - EMiTS for Renewable Energy Expansion
-
-There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts.
-
-Cities are responsible for 70% of greenhouse gas emissions on average, but suburban areas offer more space for renewable energy installations such as rooftop solar. The city of Denver has a [goal of reaching 40% emissions reductions by 2025](https://github.com/terranexum/EMiTS/tree/main/Implementations/Denver2025). Instead of waiting for new transmission lines and long permitting and construction processes to occur, we are investigating whether portable energy storage transported into cities and back during daily commutes can make a difference in helping cities reach their sustainability goals even faster. 
-
-Below is a code block from this example, demonstrating how energy, mass, information, time, and space are variables that go into the determination of an item's value in terms of EMiTS:
-
-```
-# E-Gen (Seller) - a 4 kW solar array operating over 6 sun hours
-solar_home = Element('Rooftop_Solar', EType.PRODUCT)
-solar_home.setValue(E=24, M=1, I=1, T=6, S=1)
-solar_home_value = solar_home.getValue()
-solar_home.setTType = TType.SELL
-
-# E-User (Buyer) - One Portable Whole-Home Battery Storing 100 kWh (EV-size)
-battery = Element('Portable_Battery', EType.PRODUCT)
-battery.setValue(E=100, M=455, I=1, T=12, S=1)
-battery_value = battery.getValue()
-battery.setTType = TType.BUY
-
-# E-User (Buyer) - One Home Requiring 30 kWh over a 24 hour day
-home = Element('My_Home', EType.PRODUCT)
-home.setValue(E=30, M=1, I=1, T=24, S=1)
-home_value = home.getValue()
-home.setTType = TType.BUY
-```
-Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. Nothing here is different from normal free market dynamics, just that now these dynamics can be used to drive the deployment of more renewable energy and storage capacity as well as more efficient means of using that energy.
-
-### How to Read the Diagram
-
-* Daytime: There is only one seller so anyone wanting electricity will have to purchase it at that price. If there were more than one seller, the seller with the lowest price would be the preferred seller for the two buyers. Only the buyer with the storage battery can make a purchase of the full amount of electricity being offered by the seller. The buyer with the home can only make a partial purchase of electricity at the moment.
-* Nighttime: the buyer with the storage battery during the day has now become the seller and the seller with the rooftop solar array at home is now needing to be a buyer. Neither of the two buyers can afford to purchase all the electricity being sold. Thus, the seller must sell portions of that electricity to multiple buyers.
-
-![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
-
-It may be that any complex networked system supporting a flow of something (whether energy or mass, to include information as a special case) can have those flows expressed in terms of EMiTS. Doing so provides a means for the system to optimize itself through its own dynamics. 
-
 ## The EMiTS Metric
+
+We use metric units consistent with typical human-scale activities requiring energy, matter, and information flows. When these are converted to to SI units, we are left with units of inverse velocity, s/m. We may be able to achieve a dimensionless EMiTS value by multiplying the current formula by a constant with units of speed, m/s. The speed of light comes to mind, which is the maximum speed of any energy, mass, or information flow. 
 
 ### For any product:
 $$ value = { {MS} \over {ET} } $$
@@ -87,6 +55,44 @@ p = a person participating in the performance of the service
 ### For information:
 
 Information is not included in the general form of the EMiTS metric, though if it were to be included, it would reside in the denominator. That is because to optimize the exchange of information, the least data needs to be exchanged over the shortest amount of time possible needed to achieve the desired outcome. This is easily understood: brevity is more efficient than verbosity, and one-page summaries are more efficient than thousand-page reports if the same outcome can be achieved. Information is what is exchanged during any act of communication, whether spoken, written, typed, drawn, gestured, or otherwise communicated. The exchange of information already requires the expression of all four EMiTS variables to account for the expenditure of energy, the reconfiguration of mass or energy to represent that information, requires storage over space, and requires some amount of time to take place. Thus when valuing information, the same expression can be used for the EMiTS metric as when it is used for valuing any physical product or service.
+
+## Code on Google Colab - EMiTS for Renewable Energy Expansion
+
+There is a [Jupyter notebook](https://github.com/terranexum/EMiTS/blob/main/EMiTS_Example_1.ipynb) at the top level of this repository that can be run for free on Google Colab. It demonstrates how EMiTS can be used to improve the speed and scale of grassroots, community-level renewable energy expansion efforts.
+
+Cities are responsible for 70% of greenhouse gas emissions on average, but suburban areas offer more space for renewable energy installations such as rooftop solar. The city of Denver has a [goal of reaching 40% emissions reductions by 2025](https://github.com/terranexum/EMiTS/tree/main/Implementations/Denver2025). Instead of waiting for new transmission lines and long permitting and construction processes to occur, we are investigating whether portable energy storage transported into cities and back during daily commutes can make a difference in helping cities reach their sustainability goals even faster. 
+
+Below is a code block from this example, demonstrating how energy, mass, information, time, and space are variables that go into the determination of an item's value in terms of EMiTS:
+
+```
+# E-Gen (Seller) - a 4 kW solar array operating over 6 sun hours
+solar_home = Element('Rooftop_Solar', EType.PRODUCT)
+solar_home.setValue(E=24, M=1, I=1, T=6, S=1)
+solar_home_value = solar_home.getValue()
+solar_home.setTType = TType.SELL
+
+# E-User (Buyer) - One Portable Whole-Home Battery Storing 100 kWh (EV-size)
+battery = Element('Portable_Battery', EType.PRODUCT)
+battery.setValue(E=100, M=455, I=1, T=12, S=1)
+battery_value = battery.getValue()
+battery.setTType = TType.BUY
+
+# E-User (Buyer) - One Home Requiring 30 kWh over a 24 hour day
+home = Element('My_Home', EType.PRODUCT)
+home.setValue(E=30, M=1, I=1, T=24, S=1)
+home_value = home.getValue()
+home.setTType = TType.BUY
+```
+Based on the resulting value of the item being offered for sale, a buyer can determine how much they need to buy to meet their energy need. If more is being sold than is being bought, the seller can serve more buyers. If there is more buyer demand than seller supply, then the seller can serve those buyers better by introducing more units of energy. Nothing here is different from normal free market dynamics, just that now these dynamics can be used to drive the deployment of more renewable energy and storage capacity as well as more efficient means of using that energy.
+
+### How to Read the Diagram
+
+* Daytime: There is only one seller so anyone wanting electricity will have to purchase it at that price. If there were more than one seller, the seller with the lowest price would be the preferred seller for the two buyers. Only the buyer with the storage battery can make a purchase of the full amount of electricity being offered by the seller. The buyer with the home can only make a partial purchase of electricity at the moment.
+* Nighttime: the buyer with the storage battery during the day has now become the seller and the seller with the rooftop solar array at home is now needing to be a buyer. Neither of the two buyers can afford to purchase all the electricity being sold. Thus, the seller must sell portions of that electricity to multiple buyers.
+
+![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/Transaction%20-%2024%20hours.png)
+
+It may be that any complex networked system supporting a flow of something (whether energy or mass, to include information as a special case) can have those flows expressed in terms of EMiTS. Doing so provides a means for the system to optimize itself through its own dynamics. 
 
 ## Another Example
 
