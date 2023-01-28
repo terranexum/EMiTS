@@ -10,10 +10,12 @@ This is an open source project. Collaborators and derivative projects are welcom
 
 ## The EMiTS Metric
 
-We use metric units consistent with typical human-scale activities requiring energy, matter, and information flows. When these are converted to to SI units, we are left with units of inverse velocity, s/m. We may be able to achieve a dimensionless EMiTS value by multiplying the current formula by a constant with units of speed, m/s. The speed of light comes to mind, which is the maximum speed of any energy, mass, or information flow. 
+We use metric units consistent with typical human-scale activities requiring energy, matter, and information flows. When these are converted to to SI units, we are left with units of inverse velocity, s/m. We may be able to achieve a dimensionless EMiTS value by multiplying the current formula by a constant with units of speed, m/s. The speed of light `c` comes to mind, which is the maximum speed of any energy, mass, or information flow. It is unknown whether the speed of light needs to be used in this context, but its presence allows for values that have typical orders of magnitude compared to present day currencies. It also produces a dimensionless value for the EMiTS metric.
+
+If a value is not representable for an item or service, its value is set to 1 below. An example of this in a transaction: a heat pump weighing 100 kg must be transported a distance of 10 km to service a home that requires 10 kWh of heat over 24 hours. Mass and distance only appear in the initial state. Thus, to obtain a value for the metric using the other variables, we set these equal to 1. 
 
 ### For any product:
-$$ value = { {MS} \over {ET} } $$
+$$ value = { c {MS} \over {ET} } $$
 
 where
 
@@ -26,7 +28,7 @@ E = the energy required to transport that product from the seller to the buyer, 
 T = the time it takes for the product to be moved from the seller to the buyer, in hours
 
 ### For any service:
-$$ value = { {MS} \over {ET} } $$
+$$ value = { c {MS} \over {ET} } $$
 
 where
 
@@ -39,14 +41,14 @@ E = the energy required for the person to perform that service, which includes e
 T = the time it takes for the person to provide the service, in hours
 
 ### For composite products:
-$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
+$$ value = \sum_{p=1}^n { c {MS} \over {ET} } $$
 
 where 
 
 p = a product within the composite product
 
 ### For a service requiring multiple people:
-$$ value = \sum_{p=1}^n { {MS} \over {ET} } $$
+$$ value = \sum_{p=1}^n { c {MS} \over {ET} } $$
 
 where 
 
