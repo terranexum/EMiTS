@@ -1,0 +1,20 @@
+# Denver - 100% Renewable Energy by 2025
+
+[Denver's official Climate Action Plan](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Climate-Action) is for 40% emissions reduction by 2025. You can read the plan in PDF form [here](https://www.denvergov.org/files/assets/public/climate-action/documents/ddphe_80x50_climateactionplan.pdf). Today, 80% of the emissions within Denver are from commercial buildings (about 40%) and from gas used for transportation (40%).
+
+Unlike the current plan, we are aiming for 100% renewable energy serving Denver in 2025, but we cannot rely on existing permitting and approval processes as well as policy changes to make this possible. To do this, we must rely on distributed, peer-to-peer networks for energy production and storage. The capacity of both can be developed from the ground up, expanding from places that already have solar panels, electric car batteries, and other energy storage forms.
+
+[2/9/2023: The section below requires updating.]
+
+| Step | Process Description | Notes |
+|---|---|---|
+| 1 | Determine annual energy consumption dynamics - spatial and temporal distributions, according to use (residential, commercial, industrial, public sector) | Need hourly data for all seasons |
+| 2 | Add a resilience margin to those dynamics to account for extreme weather events (stochasticity would be better than a constant margin but the latter is used now for simplicity in spreadsheet calculations) |  |
+| 3 | Define a minimum viable microgrid (MVM) - the smallest possible unit over which transactive energy can take place that does not require a connection to the main grid.  | Suggestion: one solar power installation at home charges a battery by day while people are at work. The battery then charges an electric car at night and provides power for evening climate control. At work, one solar power installation charges a battery by day and powers the building at night when people and their electric cars go home. |
+| 3.1 | Identify locations of current solar installations as well as sizes (wattages) of those arrays | Get data from PV registration websites; another source is satellite/aerial data |
+| 3.2 | Identify locations of current electric car owners as well as the models of their cars (to determine battery size and time to full charge) | Get data somehow from vehicle registrations on a city or state website? |
+| 3.3 | Identify locations of electricians able to serve local areas | Check with the local IBEW for electrical workers, and NABCEP for those trained in solar installation/maintenance |
+| 4 | Cluster the city into MVMs to ensure that each MVM can transact energy as quickly as installation can be performed. Determine the total energy production/storage capacity of all MVMs. Storage capacity must always exceed production capacity. If there are not enough MVMs for their total capacity to meet the maximum possible demand, add additional portable generation stations that fit within a 100 sq ft area.  | In many jurisdictions, tiny homes are allowed as long as they do not have a concrete foundation, are portable, and are under 100 sq ft in size. A portable solar power station could provide this capacity with no additional permit requirements, and could be located at existing MVMs. |
+| 4.1 | Assign MVMs to local electricians in a way that each new installation overlaps with at least one other MVM. In this way, the microgrid can expand and redundancy can be provided. | Overlap means that at least two MVMs have a location in common. |
+| 4.2 | Electricians schedule their installs with their customers; installations come online and energy transactions are able to take place |  |
+| 4.3 | Keep working until all MVMs are served and the city reaches 100% renewable energy by the deadline. |  |

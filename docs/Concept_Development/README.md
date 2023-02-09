@@ -21,11 +21,9 @@ Once this network can be examined, it becomes possible to understand the followi
 ## Spatial Networks and Networks within Networks 
 Networks can exist within networks, as long as each network can be represented by spatially distributed nodes over which some flow can be summed. Not much different from a quad tree representation that partitions a map into smaller and smaller self-similar squares - as long as a value can be determined for each square, the value of the entire quad tree can be determined. In the same way, local networks (microgrids for example, or technology clusters) can have some value that is the result of all nodes contained therein, and these values can be summed at higher levels of network structure, finally providing a value for the entire network itself. Over time, the network naturally optimizes itself to maximize this value.
 
-## Spatiotemporal Networks
+## Spacetime Networks
 There may also be networks that can be thought of as extending over time. Below is an attempt to convey the vague details that I understand of this at the moment, if time flows from left to right and interacting flows (entities, energy, mass, information) follow the lines that also travel from left to right. Interactions, transactions, and events appear as nodes where these flows intersect. Haven't explored this much farther yet. There is blur both forward and backward in time because our awareness really only encompasses the present. We only have recollections of the past that grow worse the far back we go. And our ability to influence future outcomes diminishes the farther forward we try to forecast.
 
-The best clarity we can have of this spatiotemporal network appears to be within a small area of focus, not too different from how we have an entire eye just to support one point at which light is focused, allowing us to have a visual awareness of the world.
-
-No light is involved in making this mental image, and thus there isn't anything like a lens I can use to focus this to make it more clear. But it seems like I have more chances everyday to attempt to resolve this even better. Definitely just a kind of sketch since I can't draw.
+The best clarity we can have of this spacetime network appears to be within a small area of focus, not too different from how we have an entire eye just to support one point at which light is focused, allowing us to have a visual awareness of the world.
 
 ![](https://github.com/terranexum/EMiTS/blob/main/Concept_Development/Images/ST_Network_blur.png)
