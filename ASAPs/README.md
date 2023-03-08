@@ -1,0 +1,11 @@
+# ASAPs - Accelerated Sustainability Action Plans
+
+We recognize that accelerating sustainability efforts cannot rely solely on existing permitting and approval processes as well as policy changes. These are still needed, but the results are longer-term and shorter-term solutions must still need to be found and deployed. Thus, in large part we rely on distributed energy resources as well as smarter uses of large-scale renewable energy production and storage of all forms during the near term, to include making preparations for larger-scale geothermal energy generation and subsurface energy storage that may come online after 2025. However, much can and must be done before 2025; this was our intent in making these plans.
+
+Different cities will have different emissions mixes as well as different environmental considerations and energy resources available. Thus, city-level sustainability plans are needed to maximize participation among all stakeholder groups geographically relevant to that area, thus ensuring the likelihood of greater support and success.
+
+The first ASAP under development was for the City of Denver. [Denver has an official Climate Action Plan](https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Climate-Action) which is to achieve a 40% emissions reduction by 2025. You can read the plan in PDF form [here](https://www.denvergov.org/files/assets/public/climate-action/documents/ddphe_80x50_climateactionplan.pdf). We wish to ensure that parallel routes to progress are available that can use underutilized resources, technologies, and involve all communities in enhancing the likelihood of success for all existing city-level sustainability plans. 
+
+A second ASAP was also developed for Jefferson County, both within Colorado. Both the City of Denver and Jeffco ASAPs allowed us to prototype two very different ASAPs and thus to be able to automate their creation. 
+
+The results of this automation will be available shortly for all cities and counties within Colorado. The cities and counties in this director under USA > Colorado are being populated with publicly available data from local utilities as well as from the state of Colorado that will be needed to produce the ASAPs. 
