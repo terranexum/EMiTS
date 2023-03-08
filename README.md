@@ -3,6 +3,7 @@
 * ASAPs - as these are published, they will be available here.
 * docs - Documentation on EMiTS, including its definition as a metric based on physically conserved values
 * src - the EMiTS code, which can be run from this folder using `python app.py`. At present, this will run a test server at http://127.0.0.1:5000 to display a network built from test data in the `static` folder. There is also a `notebooks` folder containing a Jupyter notebook that can be run on Google Colab. Both are still under development.
+* UniGRIDs - geospatial visualizations able to vary over time to guide the understanding and implementation of ASAPs.
 
 ## Overview
 
