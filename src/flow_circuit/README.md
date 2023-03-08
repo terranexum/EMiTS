@@ -101,7 +101,7 @@ Otherwise, discard the edge.
 When all edges have been considered, the minimum spanning tree will be the set of edges in the minimum spanning tree set.
 5. Once you have the minimum spanning tree, you can use it to determine the wires needed to connect the circuit elements. Each edge in the minimum spanning tree represents a wire, and the nodes at either end of the wire represent the circuit elements that need to be connected.
 
-Here's some Python code that uses Kruskal's algorithm to find the minimum spanning tree given a list of admittance values:
+Here is Python code that uses Kruskal's algorithm to find the minimum spanning tree given a list of admittance values:
 
 ```python
 class CircuitElement:
