@@ -6,7 +6,7 @@ import datetime
 import xlrd
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak, Table, TableStyle
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib import colors
 from os import devnull
@@ -95,11 +95,10 @@ def generate_report_content(file_path, pdf_path, doc):
     #content.append(Spacer(1, 0.2 * inch))
 
     # create a Paragraph object with the introductory section text and style
-    content.append(Paragraph("TerraNexum's goal is to develop and help implement accelerated plans for renewable energy and energy storage deployment to achieve profitable emissions reduction at city and county levels - at the scale of multiple megatons of CO2 emissions reductions.", styles["Normal"]))
+    content.append(Paragraph("TerraNexum's goal is to develop and help implement accelerated plans for renewable energy and energy storage deployment to achieve profitable emissions reduction at city and county levels - at the scale of multiple megatons of CO<sub>2</sub> emissions reductions.", styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
     content.append(Paragraph("Our ASAPs seek to outline goals and strategies for achieving a complete shift to renewable energy supply on an accelerated timeline within this specific locality. At this time, we are presenting facts and figures for decarbonizing electricity consumption through replacement with renewable energy production and energy storage systems.", styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
-
 
 
 
@@ -188,6 +187,8 @@ def generate_report_content(file_path, pdf_path, doc):
         content.append(Spacer(1, 0.2 * inch))
 
         return content
+    
+    content.append(PageBreak())
 
     # Add the heading
     content.append(Paragraph("Section 2. Current Energy Usage and Cost", styles['Heading2']))
@@ -227,6 +228,7 @@ def generate_report_content(file_path, pdf_path, doc):
                             ('FONTSIZE', (0, 1), (-1, -1), 10)])
     content.append(table)
     content.append(Spacer(1, 0.2 * inch))
+    content.append(PageBreak())
 
 
 
@@ -304,16 +306,15 @@ def generate_report_content(file_path, pdf_path, doc):
     content.append(Spacer(1, 0.5*inch))
 
     # Funding Innovations
-    section_content = f"The Prime Mover Program has two segments, commercial/industrial as well as residential. For businesses with commercial and industrial buildings, Colorado's C-PACE is an innovative program that offers financing of up to 30% of a building's value, and assesses those repayments on the annual property tax for that property for up to 25 years. This financing is in addition to tax credits and incentives at federal, state, and local levels.\n\n"
-    content.append(Paragraph(section_content, styles["Normal"]))
+    content.append(Paragraph("The Prime Mover Program has two segments, commercial/industrial as well as residential. For businesses with commercial and industrial buildings, Colorado's C-PACE is an innovative program that offers financing of up to 30% of a building's value, and assesses those repayments on the annual property tax for that property for up to 25 years. This financing is in addition to tax credits and incentives at federal, state, and local levels", styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
-    section_content = f"For residences, C-PACE is not available, but residential loans such as those available through Colorado's RENU program as well as federal and state tax credits already exist for home solar installations as well as battery storage.\n\n"
-    content.append(Paragraph(section_content, styles["Normal"]))
+    content.append(Paragraph("For residences, C-PACE is not available, but residential loans such as those available through Colorado's RENU program as well as federal and state tax credits already exist for home solar installations as well as battery storage.", styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
-    content.append(Paragraph('By purchasing one or more Prime Mover systems under our program, businesses and homes can save significant amounts of money on their monthly electricity bills. Over the course of a year, this can add up to a substantial amount of savings, making the initial investment in the Prime Mover system well worth it.', styles['Normal']))
-    content.append(Spacer(1, 0.5*inch))
-    content.append(Paragraph('Prime Mover systems are ideal as the foundation of an open source hardware platform. Software that is developed by and for system users to expand the capabilities of their systems could be released for free under open source licenses for the broadest personal, non-profit, and commercial use.', styles['Normal']))
-    content.append(Spacer(1, 0.5*inch))
+    content.append(Paragraph("By purchasing one or more Prime Mover systems under our program, businesses and homes can save significant amounts of money on their monthly electricity bills. Over the course of a year, this can add up to a substantial amount of savings, making the initial investment in the Prime Mover system well worth it.", styles['Normal']))
+    content.append(Spacer(1, 0.2*inch))
+    content.append(Paragraph("Prime Mover systems are ideal as the foundation of an open source hardware platform. Software that is developed by and for system users to expand the capabilities of their systems could be released for free under open source licenses for the broadest personal, non-profit, and commercial use.", styles['Normal']))
+    content.append(Spacer(1, 0.2*inch))
+    content.append(PageBreak())
 
 
     '''
@@ -370,17 +371,19 @@ def generate_report_content(file_path, pdf_path, doc):
     
     # Add content to section
 
-    section_content = f"A single Prime Mover system costs {pm_system_price}. To transition to 100% renewable energy, it would require {pm_systems_needed} Prime Mover systems to provide enough electricity for all residential and commercial customers in " + asap_area + ". This would cost {total_pm_systems_cost} to implement.\n\n"
+    section_content = f"A single Prime Mover system costs {pm_system_price}. To transition to 100% renewable energy, it would require {pm_systems_needed} Prime Mover systems to provide enough electricity for all residential and commercial customers in {asap_area}. This would cost {total_pm_systems_cost} to implement.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
-    section_content = f"With the energy savings Prime Mover owners would see by generating and storing their own electricity, which is {pm_system_savings} per year per system and thus {pm_total_savings} per year across all systems within " + asap_area + ", the Prime Mover systems could pay for themselves in {payback_period:.0f} years.\n\n"
+    section_content = f"With the energy savings Prime Mover owners would see by generating and storing their own electricity, which is {pm_system_savings} per year per system and thus {pm_total_savings} per year across all systems within {asap_area}, the Prime Mover systems could pay for themselves in {payback_period:.0f} years.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
     section_content = f"This timeframe is too long for businesses to have to wait to be cash flow positive. Below, we present information on Colorado's C-PACE program, an innovative program that would allow Prime Mover systems associated with commercial/industrial buildings and properties to be financed over as much as 25 years. Already, 118 projects have been financed with $250M in project financing, resulting in 781,603 tons of lifetime GHG emissions reduction and $77.9M of lifetime cost savings. Projects have been as small as $53K to as large as $55.5M.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
+
+    content.append(PageBreak())
 
 
     '''
@@ -418,6 +421,8 @@ def generate_report_content(file_path, pdf_path, doc):
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
+    content.append(PageBreak())
+
 
 
     '''
@@ -452,6 +457,8 @@ def generate_report_content(file_path, pdf_path, doc):
     section_content = f"For additional information on any of the above and for references for your further outreach, please use the contact information below. \n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
+
+    content.append(PageBreak())
 
 
     '''
