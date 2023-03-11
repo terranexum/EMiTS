@@ -3,21 +3,29 @@ import os, sys
 import pandas as pd
 import locale
 import datetime
+import xlrd
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib import colors
+from os import devnull
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Set the directory path to search
-dir_path = ''
+DIR_PATH = os.getenv('DIR_PATH')
 
-def generate_report_content(file_path, pdf_path):
+def generate_report_content(file_path, pdf_path, doc):
 
     #print('Working on', file_path)
 
     # read in data from utility spreadsheet
-    df = pd.read_excel(file_path)
+
+
+    wb = xlrd.open_workbook(file_path, logfile=open(devnull, 'w'))
+    df = pd.read_excel(wb, engine='xlrd')
     
 
     '''
@@ -53,9 +61,6 @@ def generate_report_content(file_path, pdf_path):
     It also uses the getSampleStyleSheet function to define styles for the content.
 
     '''
-    # create a PDF document with letter size paper
-    doc = SimpleDocTemplate(pdf_path, pagesize=letter, rightMargin=72,
-                            leftMargin=72, topMargin=72, bottomMargin=72)
 
 
     # Create a list for the individual content to be added
@@ -67,7 +72,7 @@ def generate_report_content(file_path, pdf_path):
 
     # remove last 4 characters
     asap_area = filename[:-4]
-    print(asap_area)
+    #print(asap_area)
 
     # get report date
     today = datetime.date.today()
@@ -90,9 +95,9 @@ def generate_report_content(file_path, pdf_path):
     #content.append(Spacer(1, 0.2 * inch))
 
     # create a Paragraph object with the introductory section text and style
-    content.append(Paragraph("TerraNexum's goal is to develop and help implement accelerated plans for renewable energy and energy storage deployment to achieve profitable emissions reduction at city and county levels at the scale of multiple megatons of CO2 emissions.", styles["Normal"]))
+    content.append(Paragraph("TerraNexum's goal is to develop and help implement accelerated plans for renewable energy and energy storage deployment to achieve profitable emissions reduction at city and county levels - at the scale of multiple megatons of CO2 emissions reductions.", styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
-    content.append(Paragraph("This ASAP outlines goals and strategies for achieving 100% renewable energy supply on an accelerated timeline within this specific locality.", styles["Normal"]))
+    content.append(Paragraph("Our ASAPs seek to outline goals and strategies for achieving a complete shift to renewable energy supply on an accelerated timeline within this specific locality. At this time, we are presenting facts and figures for decarbonizing electricity consumption through replacement with renewable energy production and energy storage systems.", styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
 
@@ -121,34 +126,68 @@ def generate_report_content(file_path, pdf_path):
     #c_annual_cost = locale.currency(c_annual_cost, symbol=True, grouping=True)
 
     total_cost = 0
+    total_co2 = 0
     rshift = -2
     cshift = -1
 
-    #print(df.iloc[30:40, :10])
-
-    c_customer_base = pd.to_numeric(df.iloc[40+rshift, 3+cshift], errors='coerce', downcast='integer')
-    c_annual_demand_kWh = pd.to_numeric(df.iloc[40+rshift, 4+cshift], errors='coerce', downcast='integer')
-    c_annual_cost = df.iloc[40+rshift, 6+cshift] #.replace('$', '').replace(',', '')
-    #print(c_annual_cost)
-    #c_annual_cost = pd.to_numeric(c_annual_cost)
-    #print(c_annual_cost)
-    #c_annual_cost = pd.to_numeric(df.iloc[40, 6].replace('$', '').replace(',', ''), errors='coerce')
-    total_cost += c_annual_cost
-    c_co2_emissions = pd.to_numeric(df.iloc[40+rshift, 5+cshift], errors='coerce', downcast='integer')
+    c_customer_base = df.iloc[40+rshift, 3+cshift]
+    c_annual_demand_kWh = df.iloc[40+rshift, 4+cshift]
+    c_annual_cost = df.iloc[40+rshift, 6+cshift]
+    c_co2_emissions = df.iloc[40+rshift, 5+cshift]
+    r_customer_base = df.iloc[41+rshift, 3+cshift]
+    r_annual_demand_kWh = df.iloc[41+rshift, 4+cshift]
+    r_annual_cost = df.iloc[41+rshift, 6+cshift]
+    r_co2_emissions = df.iloc[41+rshift, 5+cshift]
     
-    c_frac_demand_served = 1
     c_frac_cost_savings = 0.8
-
-    r_customer_base = pd.to_numeric(df.iloc[41+rshift, 3+cshift], errors='coerce', downcast='integer')
-    r_annual_demand_kWh = pd.to_numeric(df.iloc[41+rshift, 4+cshift], errors='coerce', downcast='integer')
-    r_annual_cost = df.iloc[41+rshift, 6+cshift] #.replace('$', '').replace(',', '')
-    #r_annual_cost = pd.to_numeric(r_annual_cost)
-    total_cost += r_annual_cost
-    r_co2_emissions = pd.to_numeric(df.iloc[41+rshift, 5+cshift], errors='coerce', downcast='integer')
-
-    r_frac_demand_served = 1
     r_frac_cost_savings = 0.8
 
+    no_elec_flag = False
+
+    if not pd.isnull(c_customer_base): c_customer_base = pd.to_numeric(c_customer_base, errors='coerce', downcast='integer')
+    else: c_customer_base = 0
+        
+    if not pd.isnull(c_annual_demand_kWh): c_annual_demand_kWh = pd.to_numeric(c_annual_demand_kWh, errors='coerce', downcast='integer')
+    else: c_annual_demand_kWh = 0
+    
+    if not pd.isnull(c_annual_cost): c_annual_cost = c_annual_cost
+    else: c_annual_cost = 0
+    
+    if not pd.isnull(c_co2_emissions): c_co2_emissions = pd.to_numeric(c_co2_emissions, errors='coerce', downcast='integer')
+    else: c_co2_emissions = 0
+
+    if not pd.isnull(r_customer_base): r_customer_base = pd.to_numeric(r_customer_base, errors='coerce', downcast='integer')
+    else: r_customer_base = 0
+        
+    if not pd.isnull(r_annual_demand_kWh): r_annual_demand_kWh = pd.to_numeric(r_annual_demand_kWh, errors='coerce', downcast='integer')
+    else: r_annual_demand_kWh = 0
+    
+    if not pd.isnull(r_annual_cost): r_annual_cost = r_annual_cost
+    else: r_annual_cost = 0
+
+    if not pd.isnull(r_co2_emissions): r_co2_emissions = pd.to_numeric(r_co2_emissions, errors='coerce', downcast='integer')
+    else: r_co2_emissions = 0
+
+    if c_customer_base == 0 or r_customer_base == 0:
+        print("Customer count missing for", asap_area)
+        no_elec_flag = True
+
+    total_cost += c_annual_cost
+    total_cost += r_annual_cost
+
+    total_co2 += c_co2_emissions
+    total_co2 += r_co2_emissions
+
+    if no_elec_flag == True:
+        # Add heading
+        content.append(Paragraph("No Electrical Customers at Present", styles['Heading2']))
+        content.append(Spacer(1, 0.2 * inch))
+        content.append(Paragraph("Although there are data for this locality for commercial and/or residential energy usage, no customers were reported receiving electric service. It is likely that the reported service is only for natural gas.", styles['Normal']))
+        content.append(Spacer(1, 0.2 * inch))
+        content.append(Paragraph("Please check back at a later time when our ASAPs account for achieving emissions reductions where natural gas is being used as well.", styles['Normal']))
+        content.append(Spacer(1, 0.2 * inch))
+
+        return content
 
     # Add the heading
     content.append(Paragraph("Section 2. Current Energy Usage and Cost", styles['Heading2']))
@@ -174,7 +213,7 @@ def generate_report_content(file_path, pdf_path):
             ['Total CO2 Emissions', c_co2, r_co2]
             ]
 
-    section_content = f"The numbers in this section were supplied from the 2021 Community Energy Report for this locality, as published by Xcel Energy on its website. A copy of this report is available within the source folder on our GitHub repository where this ASAP was published. The potential is high for this ASAP area to achieve rapid emissions reductions.\n\n"
+    section_content = f"The numbers in this section were supplied from the 2021 Community Energy Report for this locality, as published by Xcel Energy on its website. A copy of this report is available within the source folder on our GitHub repository where this ASAP was published. The potential is high for " + asap_area + " to achieve rapid emissions reductions.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
@@ -265,21 +304,17 @@ def generate_report_content(file_path, pdf_path):
     content.append(Spacer(1, 0.5*inch))
 
     # Funding Innovations
-    #content.append(Paragraph("Funding Innovations", styles['Heading3']))
-    #content.append(Spacer(1, 0.2 * inch))
     section_content = f"The Prime Mover Program has two segments, commercial/industrial as well as residential. For businesses with commercial and industrial buildings, Colorado's C-PACE is an innovative program that offers financing of up to 30% of a building's value, and assesses those repayments on the annual property tax for that property for up to 25 years. This financing is in addition to tax credits and incentives at federal, state, and local levels.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
     section_content = f"For residences, C-PACE is not available, but residential loans such as those available through Colorado's RENU program as well as federal and state tax credits already exist for home solar installations as well as battery storage.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
-
     content.append(Paragraph('By purchasing one or more Prime Mover systems under our program, businesses and homes can save significant amounts of money on their monthly electricity bills. Over the course of a year, this can add up to a substantial amount of savings, making the initial investment in the Prime Mover system well worth it.', styles['Normal']))
     content.append(Spacer(1, 0.5*inch))
-    
-    section_content = f"Prime Mover systems are ideal as the foundation of an open source hardware platform. Software that is developed by and for system users to expand their systems' capabilities could be released for free under open source licenses for the broadest personal, non-profit, and commercial use.\n\n"
-    content.append(Paragraph(section_content, styles["Normal"]))
-    content.append(Spacer(1, 0.2 * inch))
+    content.append(Paragraph('Prime Mover systems are ideal as the foundation of an open source hardware platform. Software that is developed by and for system users to expand the capabilities of their systems could be released for free under open source licenses for the broadest personal, non-profit, and commercial use.', styles['Normal']))
+    content.append(Spacer(1, 0.5*inch))
+
 
     '''
     Transition to 100% Renewable Energy
@@ -324,7 +359,10 @@ def generate_report_content(file_path, pdf_path):
     pm_total_savings = pm_system_savings * pm_systems_needed
     
     payback_period = (pm_system_cost * pm_systems_needed) / pm_total_savings
-    print(payback_period)
+    if payback_period > 25:
+        print("Payback period of", str(payback_period), "too long for", asap_area, ". Not outputting report.")
+        return []
+    
 
     pm_systems_needed = locale.format_string("%d", pm_systems_needed, grouping=True)
     pm_system_savings = locale.currency(pm_system_savings, symbol=True, grouping=True)
@@ -332,15 +370,15 @@ def generate_report_content(file_path, pdf_path):
     
     # Add content to section
 
-    section_content = f"A single Prime Mover system costs {pm_system_price}. To transition to 100% renewable energy, it would require {pm_systems_needed} Prime Mover systems to provide enough electricity for all residential and commercial customers in this ASAP area. This would cost {total_pm_systems_cost} to implement.\n\n"
+    section_content = f"A single Prime Mover system costs {pm_system_price}. To transition to 100% renewable energy, it would require {pm_systems_needed} Prime Mover systems to provide enough electricity for all residential and commercial customers in " + asap_area + ". This would cost {total_pm_systems_cost} to implement.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
-    section_content = f"With the energy savings Prime Mover owners would see by generating and storing their own electricity, which is {pm_system_savings} per year per system and thus {pm_total_savings} per year across all systems within the ASAP area, the Prime Mover systems could pay for themselves in as little as {payback_period:.0f} years.\n\n"
+    section_content = f"With the energy savings Prime Mover owners would see by generating and storing their own electricity, which is {pm_system_savings} per year per system and thus {pm_total_savings} per year across all systems within " + asap_area + ", the Prime Mover systems could pay for themselves in {payback_period:.0f} years.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
-    section_content = f"However, even that timeframe is too long for businesses to have to wait to be cash flow positive. Below, we present information on Colorado's C-PACE program, an innovative program that would allow Prime Mover systems associated with commercial/industrial buildings and properties to be financed over as much as 25 years. Already, 118 projects have been financed with $250M in project financing, resulting in 781,603 tons of lifetime GHG emissions reduction and $77.9M of lifetime cost savings. Projects have been as small as $53K to as large as $55.5M.\n\n"
+    section_content = f"This timeframe is too long for businesses to have to wait to be cash flow positive. Below, we present information on Colorado's C-PACE program, an innovative program that would allow Prime Mover systems associated with commercial/industrial buildings and properties to be financed over as much as 25 years. Already, 118 projects have been financed with $250M in project financing, resulting in 781,603 tons of lifetime GHG emissions reduction and $77.9M of lifetime cost savings. Projects have been as small as $53K to as large as $55.5M.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
@@ -407,7 +445,7 @@ def generate_report_content(file_path, pdf_path):
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
-    section_content = f"Our next step, with the data and results provided in this report, is to create a detailed geospatial visualization of how this ASAP area can be serviced over time to reach 100% renewable energy over various timeframes. Watch how the energy transition could unfold, through monthly snapshots into the future.\n\n"
+    section_content = f"Our next step, with the data and results provided in this report, is to create a detailed geospatial visualization of how " + asap_area + " can be serviced over time to reach 100% renewable energy over various timeframes. Watch how the energy transition could unfold, through monthly snapshots into the future.\n\n"
     content.append(Paragraph(section_content, styles["Normal"]))
     content.append(Spacer(1, 0.2 * inch))
 
@@ -440,15 +478,14 @@ def generate_report_content(file_path, pdf_path):
     This code builds the PDF using the build method of the SimpleDocTemplate class. 
     '''
 
-    # Build the PDF
-    doc.build(content)
+    return content
 
 
 
 
-print('dir_path', dir_path)
+print('dir_path', DIR_PATH)
 # Loop through all files in the directory
-for root, dirs, files in os.walk(dir_path):
+for root, dirs, files in os.walk(DIR_PATH):
     for file in files:
         # Check if the file has a .xls extension
         if file.endswith('.xls'):
@@ -460,9 +497,21 @@ for root, dirs, files in os.walk(dir_path):
                 # Create a new PDF with reportlab
                 pdf_path = os.path.splitext(file_path)[0] + '.pdf'
 
+                if os.path.exists(pdf_path): os.remove(pdf_path) 
+
+                # create a PDF document with letter size paper
+                doc = SimpleDocTemplate(pdf_path, pagesize=letter, rightMargin=72,
+                    leftMargin=72, topMargin=72, bottomMargin=72)
+
                 # Add content to the PDF here and build
-                report = generate_report_content(file_path, pdf_path)
-            except:
-                continue
+                report = generate_report_content(file_path, pdf_path, doc)
+
+                if len(report) > 0:
+                    doc.build(report)
+
+            except Exception as err:
+                print(pdf_path, f"Unexpected {err=}, {type(err)=}")
+                raise
+
 
             #sys.exit(1)
