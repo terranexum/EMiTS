@@ -1,6 +1,6 @@
 # EMiTS - A Framework and Metric for Producing Accelerated Sustainability Action Plans (ASAPs) 
 
-* [ASAPs - freely distributable plans are now available for the majority of cities and counties in Colorado.](https://github.com/terranexum/EMiTS/tree/main/ASAPs)
+* [ASAPs - freely distributable plans are now available for 87 cities and 16 counties in Colorado.](https://github.com/terranexum/EMiTS/tree/main/ASAPs)
 * docs - Documentation on EMiTS, including its definition as a metric based on physically conserved values
 * src - code used to generate the ASAPs, plus under-development code to generate a UNIGRID for each.
 * UNIGRIDs - upcoming geospatial visualizations able to vary over time to guide the understanding and implementation of our ASAPs.
