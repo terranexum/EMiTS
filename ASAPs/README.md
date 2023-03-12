@@ -1,5 +1,7 @@
 # ASAPs - Accelerated Sustainability Action Plans
 
+<img align="right" src="https://github.com/terranexum/EMiTS/blob/main/docs/Concept_Development/Images/ASAP_Denver.jpg" width=400>
+
 We recognize that accelerating sustainability efforts cannot rely solely on existing permitting and approval processes as well as policy changes. These are still needed, but the results are longer-term and shorter-term solutions must still need to be found and deployed. Thus, in large part we rely on distributed energy resources as well as smarter uses of large-scale renewable energy production and storage of all forms during the near term, to include making preparations for larger-scale geothermal energy generation and subsurface energy storage that may come online after 2025. However, much can and must be done before 2025; this was our intent in making these plans.
 
 Different cities will have different emissions mixes as well as different environmental considerations and energy resources available. Thus, city-level sustainability plans are needed to maximize participation among all stakeholder groups geographically relevant to that area, thus ensuring the likelihood of greater support and success.
